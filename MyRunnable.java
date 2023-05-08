@@ -18,6 +18,8 @@ class MyRunnable implements Runnable
         MyRunnable m= new MyRunnable();
         Thread t =new Thread(m);
         t.start();
+        Thread t1=new Thread("me");
+        System.out.println(t1.getName());
         for(int i=0;i<6;i++){
             try{
                 Thread.sleep(100);

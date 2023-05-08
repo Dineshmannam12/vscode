@@ -1,17 +1,18 @@
 public class ThreadEx extends Thread{
+     ThreadEx(String name){
+        super(name);
+     }
 public void run()
 {
-    for(int i=0;i<8;i++)
-    {
-        System.out.println("hello");
-    }
+   
+    //System.out.println(Thread.currentThread().getName());
 }
    public static void main(String [] args) 
    {
-    ThreadEx n=new ThreadEx();
+    ThreadEx n=new ThreadEx("ny name");
     n.start();
-    for(int i=0;i<8;i++){
-        System.out.println("world");
-    }
+    System.out.println(Thread.currentThread());
+    
+   
    }
 }
